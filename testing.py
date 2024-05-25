@@ -5,7 +5,7 @@ import numpy as np
 
 def disease(filename):
     model = load_model('model_vgg19_new.h5')
-    img = image.load_img(f'Datasets/val/validation/{filename}',target_size=(224,224))
+    img = image.load_img(f'Datasets1/val/validation/{filename}',target_size=(224,224))
     x = image.img_to_array(img)
     x = np.expand_dims(x,axis=0)
     img_data = preprocess_input(x)
